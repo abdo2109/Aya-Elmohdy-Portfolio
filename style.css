@@ -53,4 +53,78 @@ footer { background-color: var(--card-bg); text-align: center; padding: 3rem 1re
 .copyright { color: var(--muted-text); font-size: 1rem; }
 .copyright a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
 .copyright a:hover { text-decoration: underline; }
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* ========================================= */
+/* --- Responsive Design for Mobile --- */
+/* ========================================= */
+@media (max-width: 768px) {
+
+    /* --- General Adjustments --- */
+    .container {
+        padding: 1rem;
+        margin: 2rem auto;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* --- Hero Section Adjustments --- */
+    .hero-content {
+        width: 90%;
+    }
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    .name-title {
+        font-size: 2.5rem;
+    }
+    .job-title {
+        font-size: 1.2rem;
+    }
+    .cta-button {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    /* --- Skills Section Adjustments --- */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack categories vertically */
+    }
+    .skill-category h3 {
+        font-size: 1.3rem;
+    }
+
+    /* --- Timeline Adjustments (Very Important) --- */
+    .timeline::after {
+        right: 31px; /* Move the line to the side */
+    }
+    .timeline-item {
+        width: 100%;
+        padding-right: 70px; /* Make space for the line */
+        padding-left: 0;
+    }
+    /* Move all items to one side */
+    .timeline-item:nth-child(odd) {
+        right: 0;
+        text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: right;
+    }
+    /* Adjust dot positions */
+    .timeline-item::after {
+        left: auto;
+        right: 21px;
+    }
+    .timeline-content h3 {
+        text-align: right;
+    }
+    
+    /* --- Footer Adjustments --- */
+    .social-links a {
+        margin: 0 0.8rem;
+    }
+}
